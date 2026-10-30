@@ -9,6 +9,10 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship,
 BASE_DIR = Path(__file__).resolve().parents[1]
 DEFAULT_DB = BASE_DIR / "data" / "bis_assist.sqlite3"
 DATABASE_URL = os.getenv("BIS_DATABASE_URL", f"sqlite:///{DEFAULT_DB.as_posix()}")
+if DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = "postgresql+psycopg://" + DATABASE_URL.removeprefix("postgres://")
+elif DATABASE_URL.startswith("postgresql://"):
+    DATABASE_URL = "postgresql+psycopg://" + DATABASE_URL.removeprefix("postgresql://")
 if DATABASE_URL.startswith("sqlite"):
     Path(DATABASE_URL.removeprefix("sqlite:///" )).parent.mkdir(parents=True, exist_ok=True)
 
