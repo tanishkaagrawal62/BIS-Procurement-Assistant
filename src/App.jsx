@@ -313,7 +313,6 @@ function Upload() {
       <textarea id="spec" rows="6" value={spec} onChange={e => setSpec(e.target.value)} placeholder="Example: Supply of M12 carbon steel hex bolts, property class 8.8, with zinc coating…" />
       {voiceStatus && <div className="form-help voice-status" aria-live="polite">{voiceStatus}</div>}
       <div className="form-help">Add product names, materials, dimensions, safety, testing or performance requirements.</div>
-      <div className="notice"><span>ⓘ</span> Image OCR runs in this browser in English; image files stay on your device. The extracted text is sent to the BIS Assist backend and stored with your account. First use downloads the OCR engine. Scanned PDFs still need manual text input.</div>
       {ocrStatus && <p className="form-help ocr-status" role="status">{ocrStatus}</p>}
       {error && <p className="form-error" role="alert">{error}</p>}
       <div className="form-actions"><Button to="/" variant="secondary">Cancel</Button><button className="button primary" type="submit" disabled={submitting}>{submitting ? 'Analysing…' : 'Analyse Tender →'}</button></div>
