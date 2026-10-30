@@ -1,0 +1,16 @@
+[
+  {
+    "is_number": "REPLACE_WITH_VERIFIED_IS_NUMBER",
+    "title": "REPLACE_WITH_EXACT_OFFICIAL_TITLE",
+    "scope": null,
+    "keywords": [],
+    "department": null,
+    "revision_year": null,
+    "status": null,
+    "amendments": null,
+    "source_url": "https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/knowyourstandards/indian_standards/isdetails",
+    "source_checked_at": null,
+    "provenance": "Replace with the official BIS source checked and retrieval date.",
+    "verification_state": "unverified"
+  }
+]
